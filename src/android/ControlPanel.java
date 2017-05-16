@@ -46,7 +46,7 @@ public class Reboot extends CordovaPlugin {
     private void wifi(CallbackContext callbackContext) {
         try {
          Context context=this.cordova.getActivity().getApplicationContext();
-         Intent setting = new Intent(Settings.WIFI_SETTINGS);
+         Intent setting = new Intent(Settings.ACTION_WIFI_SETTINGS);
          setting.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
          context.startActivity(setting);
          callbackContext.success("Open TimeZone settings...");
