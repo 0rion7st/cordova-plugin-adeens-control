@@ -14,7 +14,7 @@ import android.content.Context;
 /**
  * This class echoes a string called from JavaScript.
  */
-public class Reboot extends CordovaPlugin {
+public class ControlPanel extends CordovaPlugin {
 
     private static final String TAG = "ControlPlugin";
 
