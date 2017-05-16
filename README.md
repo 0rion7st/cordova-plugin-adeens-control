@@ -11,8 +11,8 @@ Usage
 --------
 Following method can be called after deviceready:
 
-    cordova.plugins.ControlPanel.wifi(); //Opens WiFi settings Dialog
-    cordova.plugins.ControlPanel.timezone(); //Opens TimeZone settings Dialog
+    cordova.plugins.ControlPanel.openWifiDialog(); //Opens WiFi settings Dialog
+    cordova.plugins.ControlPanel.openTimeZoneDialog();//Opens TimeZone settings Dialog
 
 ===================
 

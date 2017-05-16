@@ -1,4 +1,4 @@
-package com.adeens.control;
+package com.adeens;
 
 import android.util.Log;
 
