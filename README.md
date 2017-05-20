@@ -13,6 +13,7 @@ Following method can be called after deviceready:
 
     cordova.plugins.ControlPanel.openWifiDialog(); //Opens WiFi settings Dialog
     cordova.plugins.ControlPanel.openTimeZoneDialog();//Opens TimeZone settings Dialog
+    cordova.plugins.ControlPanel.openDisplayDialog();//Opens Display settings Dialog
 
 ===================
 

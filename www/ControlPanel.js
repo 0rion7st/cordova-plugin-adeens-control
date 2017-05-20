@@ -7,3 +7,6 @@ exports.openWifiDialog = function(success, error) {
 exports.openTimeZoneDialog = function(success, error) {
     exec(success, error, "ControlPanel", "timezone", []);
 };
+exports.openDisplayDialog = function(success, error) {
+    exec(success, error, "ControlPanel", "display", []);
+};
