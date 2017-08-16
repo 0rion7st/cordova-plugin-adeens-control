@@ -36,9 +36,9 @@ public class ControlPanel extends CordovaPlugin {
         }
         else if (action.equals("appinfo")) {
             try {
-                Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                intent.setData(Uri.parse("package:com.xwalk.adscreen"));
-                context.startActivity(intent);
+                 Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                 intent.setData(Uri.parse( "package:com.xwalk.adscreen"));
+                 context.startActivity(intent);
                 callbackContext.success(new String("Open app info..."));
                 return true;
             } catch (Exception ex) {
