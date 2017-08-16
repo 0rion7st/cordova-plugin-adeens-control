@@ -34,6 +34,18 @@ public class ControlPanel extends CordovaPlugin {
             this.launchActivity(context,"com.android.tv.settings",".device.display.DisplayActivity",callbackContext);
             return true;
         }
+        else if (action.equals("appinfo")) {
+            try {
+                Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                intent.setData(Uri.parse("package:com.xwalk.adscreen"));
+                context.startActivity(intent);
+                callbackContext.success(new String("Open app info..."));
+                return true;
+            } catch (Exception ex) {
+                  Log.i(TAG, "Could not open app info dialog", ex);
+                  callbackContext.error(new String("Open app info failed."));
+             }
+        }
         return false;
     }
 
@@ -46,7 +58,7 @@ public class ControlPanel extends CordovaPlugin {
               context.startActivity(i);
               callbackContext.success(new String("Open "+packageName+activityName+"..."));
         } catch (Exception ex) {
-              Log.i(TAG, "Could not open timezone dialog", ex);
+              Log.i(TAG, "Could not open "+activityName+" dialog", ex);
               callbackContext.error(new String("Open "+packageName+activityName+" failed."));
         }
     }

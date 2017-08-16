@@ -10,3 +10,6 @@ exports.openTimeZoneDialog = function(success, error) {
 exports.openDisplayDialog = function(success, error) {
     exec(success, error, "ControlPanel", "display", []);
 };
+exports.openAppInfoDialog = function(success, error) {
+    exec(success, error, "ControlPanel", "appinfo", []);
+};
