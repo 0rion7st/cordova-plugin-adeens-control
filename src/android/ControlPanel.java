@@ -32,7 +32,7 @@ public class ControlPanel extends CordovaPlugin {
             return true;
         }
         else if (action.equals("openLauncher")) {
-            this.launchActivity(context,"eu.chainfire.tv.sideloadlauncher","",callbackContext);
+            this.launchActivity(context,"eu.chainfire.tv.sideloadlauncher",".MainActivity",callbackContext);
             return true;
         }
         else if (action.equals("display")) {
