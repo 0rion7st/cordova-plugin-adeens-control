@@ -39,6 +39,7 @@ public class ControlPanel extends CordovaPlugin {
             this.launchActivity(context,"com.android.tv.settings","",callbackContext);
             return true;
         }
+        return false;
 
     }
 
