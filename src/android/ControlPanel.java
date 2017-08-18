@@ -31,12 +31,12 @@ public class ControlPanel extends CordovaPlugin {
             this.launchActivity(context,"com.android.tv.settings",".system.DateTimeActivity",callbackContext);
             return true;
         }
-        else if (action.equals("display")) {
-            this.launchActivity(context,"com.xiaozhenhe",".minix",callbackContext);
+        else if (action.equals("openMinixLauncher")) {
+            this.launchActivity(context,"com.xiaozhenhe.minix",".MINIX_Launcher",callbackContext);
             return true;
         }
-        else if (action.equals("openMinixLauncher")) {
-            this.launchActivity(context,"com.android.tv.settings","",callbackContext);
+        else if (action.equals("display")) {
+            this.launchActivity(context,"com.android.tv.settings",".device.display.DisplayActivity",callbackContext);
             return true;
         }
         return false;
