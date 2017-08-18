@@ -11,6 +11,6 @@ exports.openDisplayDialog = function(success, error) {
     exec(success, error, "ControlPanel", "display", []);
 };
 
-exports.openMinixLauncher = function(success, error) {
-    exec(success, error, "ControlPanel", "openMinixLauncher", []);
+exports.openLauncher = function(success, error) {
+    exec(success, error, "ControlPanel", "openLauncher", []);
 };
