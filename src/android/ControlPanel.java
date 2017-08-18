@@ -32,22 +32,14 @@ public class ControlPanel extends CordovaPlugin {
             return true;
         }
         else if (action.equals("display")) {
-            this.launchActivity(context,"com.android.tv.settings",".device.display.DisplayActivity",callbackContext);
+            this.launchActivity(context,"com.xiaozhenhe",".minix",callbackContext);
             return true;
         }
-        else if (action.equals("appinfo")) {
-            try {
-                 Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-                 intent.setData(Uri.parse( "package:com.xwalk.adscreen"));
-                 context.startActivity(intent);
-                callbackContext.success(new String("Open app info..."));
-                return true;
-            } catch (Exception ex) {
-                  Log.i(TAG, "Could not open app info dialog", ex);
-                  callbackContext.error(new String("Open app info failed."));
-             }
+        else if (action.equals("openMinixLauncher")) {
+            this.launchActivity(context,"com.android.tv.settings","",callbackContext);
+            return true;
         }
-        return false;
+
     }
 
     private void launchActivity(Context context, String packageName, String activityName, CallbackContext callbackContext)
